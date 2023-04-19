@@ -4,10 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
+        <h1 className="text-3xl font-bold text-gray-600">
+        Hello world!
+        </h1>
     </div>
   )
 }
