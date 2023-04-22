@@ -8,8 +8,6 @@ const Header = ({onAdd}) => {
   const  onSubmit = async(e)=>{
     e.preventDefault();
     if(ticker.length>0){
-      // await getVal(ticker);
-      // await onAdd(ticker,val);
       fetch(`https://min-api.cryptocompare.com/data/price?fsym=${ticker.toUpperCase()}&tsyms=USD&api_key=${_apiKey}`)
       .then(data => data.json())
       .then(data =>{
@@ -17,14 +15,6 @@ const Header = ({onAdd}) => {
       })
     }
    
-}
-
-const getVal = (title)=>{
-  fetch(`https://min-api.cryptocompare.com/data/price?fsym=${title.toUpperCase()}&tsyms=USD&api_key=${_apiKey}`)
-  .then(data => data.json())
-  .then(data =>{
-    setTickerVal(data.USD)
-  })
 }
   return (
     <div className='flex-col w-1 justify-start font-poppins'>
