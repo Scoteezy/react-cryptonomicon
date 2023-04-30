@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 const Header = ({onAdd}) => {
   const [ticker,setTicker] = useState('');
-  const [val, setTickerVal] = useState('');
   const _apiKey = '142d4e2f560b2a4a3070126c4f7416fa83ecdb95a40398e0cb7a388e9d65a73d';
 
   const  onSubmit = async(e)=>{
@@ -14,8 +13,8 @@ const Header = ({onAdd}) => {
         onAdd(ticker.toUpperCase(),data.USD)
       })
     }
-   
 }
+
   return (
     <div className='flex-col w-1 justify-start font-poppins'>
       <h3>Тикер</h3>
